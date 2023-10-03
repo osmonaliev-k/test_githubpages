@@ -90,9 +90,7 @@
             width: 48%;
             text-align: center;
         }
-        .toggle-content {
-            display: none;
-        }
+      
     </style>
 </head>
 <body>
@@ -146,7 +144,8 @@
 
         <section id="gallery">
             <h2>Cat Gallery</h2>
-            <p>Enjoy these adorable pictures of cats:</p>
+            <!-- <p>Enjoy these adorable pictures of cats:</p> -->
+            <button id="toggleGalleryButton">Enjoy these adorable pictures of cats:</button>
             <div class="cat-gallery">
                 <img src="pictures/gallery/cute_cat1.jpg" alt="Cat 1">
                 <img src="pictures/gallery/cute_cat2.jpg" alt="Cat 2">
@@ -163,16 +162,20 @@
         </section>
     </div>
     <script>
-      // JavaScript function to toggle the content
-      function toggleContent() {
-        var content = document.querySelector('.toggle-content');
-        if (content.style.display === 'none' || content.style.display === '') {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      }
-      </script>
+        // Get the button and the gallery div by their IDs
+        const toggleGalleryButton = document.getElementById("toggleGalleryButton");
+        const catGallery = document.querySelector(".cat-gallery");
+    
+        // Add a click event listener to the button
+        toggleGalleryButton.addEventListener("click", () => {
+            // Toggle the display property of the cat-gallery div
+            if (catGallery.style.display === "none" || catGallery.style.display === "") {
+                catGallery.style.display = "block";
+            } else {
+                catGallery.style.display = "none";
+            }
+        });
+    </script>
     
 </body>
 </html>
