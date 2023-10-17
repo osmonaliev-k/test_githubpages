@@ -22,7 +22,7 @@
 
         nav,
         footer {
-            background-color: #666;
+            background-color: #333;
             color: white;
             padding: 10px;
         }
@@ -45,8 +45,12 @@
         /* selector list */
         h1,
         h2 {
+            padding: 20px;
             text-align: center;
-            color: #333;
+            color: black;
+        }
+        h3 {
+            padding: 10px;
         }
 
         /* compound selector */
@@ -347,12 +351,12 @@
     <script>
         // Get a reference to the button and the target section by their IDs
         const exploreButton = document.getElementById('exploreButton');
-        const about = document.getElementById('about');
+        const breeds = document.getElementById('breeds');
 
         // Add a click event listener to the button
         exploreButton.addEventListener('click', () => {
             // Scroll to the target section with smooth behavior
-            about.scrollIntoView({ behavior: 'smooth' });
+            breeds.scrollIntoView({ behavior: 'smooth' });
         });
     </script>
 
