@@ -72,7 +72,7 @@
 
         /* descendant selector */
         div p {
-            text-align: center;
+            text-align: left;
             font-size: 18px;
             line-height: 1.5;
             color: #666;
@@ -94,10 +94,12 @@
         }
 
         .cat-gallery img {
-            width: 48%;
+            width: 68%;
             margin-bottom: 20px;
             border: 1px solid #ddd;
             border-radius: 5px;
+            gap: 50px;
+
         }
 
         .cat-breeds {
@@ -112,7 +114,8 @@
         .breed-item {
         display: flex;
         align-items: center;
-        margin-bottom: 20px;
+        margin: 20px;
+        gap: 100px;
         }
         
         .breed-item img {
@@ -127,6 +130,9 @@
         flex-direction: row-reverse;
         background-color: rgb(223, 223, 223);
         }
+        .reverse p {
+            text-align: right;
+        }
 
         .benefit {
             display: flex;
@@ -137,7 +143,7 @@
         }
 
         .cat-breeds div {
-            width: 48%;
+            width: 58%;
             text-align: center;
         }
 
@@ -184,10 +190,13 @@
         .hero h1 {
             padding: 20px;
             font-size: 80px;
+            color: wheat;
         }
 
         .hero div {
-            font-size: 30px;
+            font-size: 25px;
+            text-align: center;
+            color:beige;
         }
 
 
@@ -229,9 +238,9 @@
         <h1>Welcome to the Cats Website</h1>
     </header> -->
 
-    <nav style="display: flex; justify-content: space-between; align-items: center;">
+    <nav style="display: flex; justify-content: space-between; align-items: center; position: absolute; width: 100%;">
         <a> <img width=70px, height=70px, src="pictures/cat_logo.png"></a>
-        <nav style="display: flex;">
+        <nav style="display: flex; ">
             <!-- <a href="#about">About Cats</a> -->
             <a href="#breeds">Cat Breeds</a>
             <a href="#gallery">Cat Gallery</a>
