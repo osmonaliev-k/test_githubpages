@@ -34,13 +34,13 @@
             margin: 10px;
         }
 
-        .container {
-            max-width: 800px;
+        /* .container {
+            max-width: 1400px;
             margin: 20px auto;
             padding: 20px;
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
+        } */
 
         /* selector list */
         h1,
@@ -88,9 +88,33 @@
 
         .cat-breeds {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 50px;
+            gap: 50px;
+        }
+
+        .breed-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        }
+        
+        .breed-item img {
+            max-width: 50%;
+        }
+
+        .breed-info {
+        max-width: 50%;
+        }
+
+        .benefit {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px;
+            gap: 50px;
         }
 
         .cat-breeds div {
@@ -123,6 +147,9 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background-image: url(pictures/background2.jpg);
+            background-size: cover;
+            background-position: center;
         }
 
         .img-header {
@@ -162,6 +189,13 @@
             background-color: darkred;
             /* Change button color on hover */
         }
+
+        #contact {
+            background-image: url(pictures/background.jpg);
+            background-size: cover;
+            background-position: center;
+            color: black;
+        }
         
     </style>
 </head>
@@ -171,8 +205,8 @@
     <!-- <header>
         <h1>Welcome to the Cats Website</h1>
     </header> -->
-    
-    <nav style="display: flex; justify-content: space-between; align-items: center;">        
+
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
         <a> <img width=70px, height=70px, src="pictures/cat_logo.png"></a>
         <nav style="display: flex;">
             <a href="#about">About Cats</a>
@@ -196,88 +230,90 @@
 
     </footer>
 
-    <div class="container">
-        <section id="about">
-            <h2>About Cats</h2>
-            <p class="r">Cats are beloved pets known for their agility, independence, and playful nature. They have been
-                companions to humans for thousands of years, and their charm continues to captivate people worldwide.
-            </p>
-        </section>
+    <section id="about">
+        <h2>About Cats</h2>
+        <p class="r">Cats are beloved pets known for their agility, independence, and playful nature. They have been
+            companions to humans for thousands of years, and their charm continues to captivate people worldwide.
+        </p>
+    </section>
 
-        <section id="breeds">
-            <h2>Cat Breeds</h2>
-            <div class="cat-breeds">
-                <div>
-                    <img src="pictures/cats/Persian.jpg" alt="Persian">
-                    <p>Persian</p>
-                    <p>Big round eyes inside a round face give Persians their unmistakable look. Add in the flat face
-                        and the distinctive profile, or smushed nose, and you know you’ve found a gorgeous, soft,
-                        sweet-tempered Persian cat. Affectionate toward their owners, children, and other pets, Persians
-                        are generally not very active, preferring a quiet environment. Averaging between 3-6 kg (7-12
-                        lbs) as adults, they are on the smaller side but will provide lots of cuddling and companionship
-                        during rest periods. Because of their semi-dense coats, they overheat easily and can require
-                        professional grooming to prevent matted fur.</p>
-                </div>
-                <div>
-                    <img src="pictures/cats/Siamese.jpg" alt="Siamese">
-                    <p>Siamese</p>
-                    <p>Long and slender, Siamese may have an elongated, wedged-shaped face or a rounder, apple-shaped
-                        one. Their ears, noses, paws, and tails come in complementary colours that offset their
-                        cream-coloured bodies. With their short hair, they don’t require the combing and care that a
-                        longhaired cat needs. They are playful and energetic and weigh between 3.5-5.5 kg (7-12 lbs).
-                        Very vocal, they will keep you engaged in conversation.</p>
-                </div>
-                <div>
-                    <img src="pictures/cats/Maine Coon.jpg" alt="Maine Coon">
-                    <p>Maine Coon</p>
-                    <p>The gentle giants of the cat world, Maine Coons are magnificent when they reach their tallest
-                        height of 16 inches, length of up to 100 cm (40 in) and weigh in at 3.6-8.2 kg (7-18 lbs) or
-                        more. They have lovely tufts of fur in their ears and under their paws, a square face and a big
-                        fluffy tail. They are friendly, inquisitive, and very hardy, meaning that they can live in a
-                        variety of climates and require less care and attention than other breeds. That’s not to say a
-                        Maine Coon won’t want attention. They love to be admired as much as the next fur baby. They are
-                        curious and fascinated by water.</p>
-                </div>
-                <div>
-                    <img src="pictures/cats/Ragdoll.jpg" alt="Ragdoll">
-                    <p>Ragdoll</p>
-                    <p>Graceful and intelligent, Ragdolls are mild-mannered and sweet. Their large, striking blue eyes
-                        are discerning as well as affectionate. Growing to anywhere between 6-9 kg (15-20 lbs), it takes
-                        these long-haired beauties about three years to reach full maturity. They can be trained and
-                        many are very good with children, making a Ragdoll cat an excellent family member.</p>
-                </div>
-                <div>
-                    <img src="pictures/cats/Bengal.jpg" alt="Bengal">
-                    <p>Bengal</p>
-                    <p>Bengal cats have become very popular because they look like miniature (3.6-7 kg [8-15 lb])
-                        leopards. Like Abyssinians, they are extremely curious and inquisitive. Without a lot of
-                        attention and things to do to stay busy, they can become bored or frustrated which might lead to
-                        undesirable behaviours. This is a breed of cat that loves water and may decide to go fishing in
-                        your aquarium. While gorgeous, they are definitely not suited to every home.</p>
+    <section id="breeds">
+        <h2>Cat Breeds</h2>
+        <div class="cat-breeds">
+            <div class="breed-item">
+                <img src="pictures/cats/Persian.jpg" alt="Persian">
+                <div class="breed-info">    
+                <h3>Persian</h3>
+                <p>Big round eyes inside a round face give Persians their unmistakable look. Add in the flat face
+                    and the distinctive profile, or smushed nose, and you know you’ve found a gorgeous, soft,
+                    sweet-tempered Persian cat. Affectionate toward their owners, children, and other pets, Persians
+                    are generally not very active, preferring a quiet environment. Averaging between 3-6 kg (7-12
+                    lbs) as adults, they are on the smaller side but will provide lots of cuddling and companionship
+                    during rest periods. Because of their semi-dense coats, they overheat easily and can require
+                    professional grooming to prevent matted fur.</p>
                 </div>
             </div>
-        </section>
-
-        <section id="gallery">
-            <h2>Cat Gallery</h2>
-            <!-- <p>Enjoy these adorable pictures of cats:</p> -->
-            <button id="toggleGalleryButton">Enjoy these adorable pictures of cats:</button>
-            <div class="cat-gallery">
-                <img src="pictures/gallery/cute_cat1.jpg" alt="Cat 1">
-                <img src="pictures/gallery/cute_cat2.jpg" alt="Cat 2">
-                <img src="pictures/gallery/cute_cat3.jpg" alt="Cat 3">
-                <img src="pictures/gallery/cute_cat4.jpg" alt="Cat 4">
-                <img src="pictures/gallery/cute_cat5.jpg" alt="Cat 5">
-                <img src="pictures/gallery/cute_cat6.jpg" alt="Cat 6">
+        </div>
+    
+            <div>
+                <img src="pictures/cats/Siamese.jpg" alt="Siamese">
+                <p>Siamese</p>
+                <p>Long and slender, Siamese may have an elongated, wedged-shaped face or a rounder, apple-shaped
+                    one. Their ears, noses, paws, and tails come in complementary colours that offset their
+                    cream-coloured bodies. With their short hair, they don’t require the combing and care that a
+                    longhaired cat needs. They are playful and energetic and weigh between 3.5-5.5 kg (7-12 lbs).
+                    Very vocal, they will keep you engaged in conversation.</p>
             </div>
-        </section>
+            <div>
+                <img src="pictures/cats/Maine Coon.jpg" alt="Maine Coon">
+                <p>Maine Coon</p>
+                <p>The gentle giants of the cat world, Maine Coons are magnificent when they reach their tallest
+                    height of 16 inches, length of up to 100 cm (40 in) and weigh in at 3.6-8.2 kg (7-18 lbs) or
+                    more. They have lovely tufts of fur in their ears and under their paws, a square face and a big
+                    fluffy tail. They are friendly, inquisitive, and very hardy, meaning that they can live in a
+                    variety of climates and require less care and attention than other breeds. That’s not to say a
+                    Maine Coon won’t want attention. They love to be admired as much as the next fur baby. They are
+                    curious and fascinated by water.</p>
+            </div>
+            <div>
+                <img src="pictures/cats/Ragdoll.jpg" alt="Ragdoll">
+                <p>Ragdoll</p>
+                <p>Graceful and intelligent, Ragdolls are mild-mannered and sweet. Their large, striking blue eyes
+                    are discerning as well as affectionate. Growing to anywhere between 6-9 kg (15-20 lbs), it takes
+                    these long-haired beauties about three years to reach full maturity. They can be trained and
+                    many are very good with children, making a Ragdoll cat an excellent family member.</p>
+            </div>
+            <div>
+                <img src="pictures/cats/Bengal.jpg" alt="Bengal">
+                <p>Bengal</p>
+                <p>Bengal cats have become very popular because they look like miniature (3.6-7 kg [8-15 lb])
+                    leopards. Like Abyssinians, they are extremely curious and inquisitive. Without a lot of
+                    attention and things to do to stay busy, they can become bored or frustrated which might lead to
+                    undesirable behaviours. This is a breed of cat that loves water and may decide to go fishing in
+                    your aquarium. While gorgeous, they are definitely not suited to every home.</p>
+            </div>
+        </div>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>If you have any questions or would like to share your love for cats, feel free to contact us at
-                cats@example.com.</p>
-        </section>
-    </div>
+    <section id="gallery">
+        <h2>Cat Gallery</h2>
+        <!-- <p>Enjoy these adorable pictures of cats:</p> -->
+        <button id="toggleGalleryButton">Enjoy these adorable pictures of cats:</button>
+        <div class="cat-gallery">
+            <img src="pictures/gallery/cute_cat1.jpg" alt="Cat 1">
+            <img src="pictures/gallery/cute_cat2.jpg" alt="Cat 2">
+            <img src="pictures/gallery/cute_cat3.jpg" alt="Cat 3">
+            <img src="pictures/gallery/cute_cat4.jpg" alt="Cat 4">
+            <img src="pictures/gallery/cute_cat5.jpg" alt="Cat 5">
+            <img src="pictures/gallery/cute_cat6.jpg" alt="Cat 6">
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or would like to share your love for cats, feel free to contact us at
+            cats@example.com.</p>
+    </section>
     <script>
         // Get the button and the gallery div by their IDs
         const toggleGalleryButton = document.getElementById("toggleGalleryButton");
