@@ -229,6 +229,9 @@
             background-color: bisque;
         }
         
+        #gallery {
+            justify-content: center;
+         }
     </style>
 </head>
 
@@ -336,7 +339,7 @@
         <h2>Cat Gallery</h2>
         <!-- <p>Enjoy these adorable pictures of cats:</p> -->
         <button id="toggleGalleryButton">
-            <h3>Enjoy these adorable pictures of cats:</h3>
+            <h4>Enjoy these adorable pictures of cats:</h4>
         </button>
         <div class="cat-gallery">
             <img src="pictures/gallery/cute_cat1.jpg" alt="Cat 1">
@@ -348,11 +351,16 @@
         </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>If you have any questions or would like to share your love for cats, feel free to contact us at
-            cats@example.com.</p>
+    <section id="contact" style="background-color: #f9f9f9; padding: 30px; text-align: center;">
+        <h2 style="color: black; font-size: 32px; margin-bottom: 20px;">Contact Us</h2>
+        <p style="font-size: 18px; color: black; margin-bottom: 10px;">
+            If you have any questions or would like to share pictures of your cat, feel free to get in touch with us.
+        </p>
+        <a href="mailto:cats@example.com" style="text-decoration: none; color: #007BFF; font-size: 20px; font-weight: bold;">
+            <i class="far fa-envelope"></i> Email us: cats@example.com
+        </a>
     </section>
+    
     <script>
         // Get the button and the gallery div by their IDs
         const toggleGalleryButton = document.getElementById("toggleGalleryButton");
